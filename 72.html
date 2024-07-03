@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>揚德廣告</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: #fff;
+        }
+
+        .logo-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .logo img {
+            max-height: 250px;
+            cursor: pointer;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            gap: 40px;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav a {
+            text-decoration: none;
+            font-size: 50px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        nav a:hover, nav a:focus {
+            text-decoration: underline;
+        }
+
+        nav a:nth-child(1) {
+            color: #E36B71;
+        }
+
+        nav a:nth-child(2) {
+            color: #FEEAB6;
+        }
+
+        nav a:nth-child(3) {
+            color: #C1E3E1;
+        }
+
+        .hero img {
+            display: block;
+            width: calc(100% - 50px);
+            height: auto;
+            margin: 20px auto;
+        }
+
+        .steps {
+            padding: 20px;
+            background-color: #f9f9f9;
+            text-align: center;
+        }
+
+        .steps h2 {
+            margin-top: 0;
+            font-size: 2em;
+        }
+
+        .step-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .step {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .circle {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 25px;
+            color: #fff;
+            margin-bottom: 10px;
+        }
+
+        .about, .story, .events, .services, .contact {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .about img {
+            max-width: 150px;
+            border-radius: 50%;
+        }
+
+        .content-section {
+            display: none;
+        }
+
+        .content-section.active {
+            display: block;
+        }
+
+        .news, .steps {
+            padding: 20px;
+            background-color: #f9f9f9;
+            text-align: center;
+        }
+
+        .news h2, .steps h2 {
+            margin-top: 0;
+            font-size: 2em;
+        }
+
+        .news ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .news li {
+            margin-bottom: 10px;
+            cursor: pointer;
+        }
+
+        .news li:active {
+            background-color: grey;
+        }
+
+        .contact img {
+            width: 80px;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <div class="logo">
+                <img src="images/1.PNG" alt="揚德廣告" onclick="showSection('home')">
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#" onclick="showSection('about', this)" style="color: #FF69B4;">認識揚德</a></li>
+                <li><a href="#" onclick="showSection('services', this)" style="color: #F8CA4D;">服務項目</a></li>
+                <li><a href="#" onclick="showSection('contact', this)" style="color: #54A1C7;">聯絡資訊</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Home Section -->
+        <section id="home" class="content-section active">
+            <section class="hero">
+                <img src="images/2.jpg" alt="色卡">
+            </section>
+            <section class="news">
+                <h2>最新消息</h2>
+                <ul>
+                    <li onclick="this.style.backgroundColor='grey'">5月公休時間出來囉~</li>
+                    <li onclick="this.style.backgroundColor='grey'">2024.4.30 將網站維護，造成不便，敬請見諒！謝謝！</li>
+                    <li onclick="this.style.backgroundColor='grey'">最新服務項目</li>
+                    <li onclick="this.style.backgroundColor='grey'">4月公休時間出來囉~</li>
+                </ul>
+            </section>
+            <section class="steps">
+                <h2>訂單成立步驟</h2>
+                <div class="step-container">
+                    <div class="step">
+                        <div class="circle" style="background-color: #F8CACD;">1</div>
+                        <p>諮詢/討論稿件</p>
+                    </div>
+                    <div class="step">
+                        <div class="circle" style="background-color: #FEEAB6;">2</div>
+                        <p>確認稿件</p>
+                    </div>
+                    <div class="step">
+                        <div class="circle" style="background-color: #C1E3E1;">3</div>
+                        <p>成立訂單/製作</p>
+                    </div>
+                    <div class="step">
+                        <div class="circle" style="background-color: #C4E8E2;">4</div>
+                        <p>付款/取貨</p>
+                    </div>
+                </div>
+            </section>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="content-section">
+            <section class="about">
+                <h2 style="color: #000000;">認識揚德</h2>
+                <img src="images/3.jpg" alt="楊智宇先生">
+                <p>楊智宇先生</p>
+                <p>負責人楊智宇，出生於90年，是第三代老闆，畢業於國立台灣藝術大學美術系，目前即將要就讀國立台灣藝術大學美術學系當代視覺文化與實踐碩士班。</p>
+            </section>
+            <section class="story">
+                <h2>創辦時間</h2>
+                <p>創辦於民國84年7月13日，至今已經快三十年。</p>
+            </section>
+            <section class="events">
+                <h2>揚德大事記</h2>
+                <p>原先住址為新北市三芝區長勤街４８號１樓，現今改為新北市三芝區長安街119號1樓，創始人於民國89年去世，由二代老闆接手，二代老闆於民國112年退休，轉由三代老闆繼續經營。</p>
+            </section>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="content-section">
+            <h2 style="color: #000000; text-align: center;">服務項目</h2>
+            <div style="display: flex; flex-direction: column; align-items: center;">
+                <p>壓克力招牌 霓虹燈 帆布廣告 電腦刻字</p>
+                <p>不銹鋼字 裱框 木匾 旗幟 布條 印刷</p>
+                <p>名片 禮品 賀匾 獎牌</p>
+                <img src="images/4.jpg" alt="服務項目圖片">
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="content-section">
+            <h2 style="color: #000000; text-align: center;">聯絡資訊</h2>
+            <div style="display: flex; flex-direction: column; align-items: center;">
+                <div>
+                    <p>楊小姐</p>
+                    <p>09XX-XXX-XXX</p>
+                    <p>02-XXXX-XXXX</p>
+                </div>
+                <div>
+                    <p>楊先生</p>
+                    <p>09XX-XXX-XXX</p>
+                    <p>02-XXXX-XXXX</p>
+                </div>
+                <p>店面地址: 新北市三芝區長安街119號1樓</p>
+				                <img src="images/5.png" alt="聯絡資訊">
+            </div>
+        </section>
+    </main>
+
+    <script>
+        function showSection(sectionId, element) {
+            const sections = document.querySelectorAll('.content-section');
+            sections.forEach(section => {
+                section.classList.remove('active');
+            });
+            document.getElementById(sectionId).classList.add('active');
+
+            const navLinks = document.querySelectorAll('nav a');
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+            });
+            element.classList.add('active');
+        }
+
+        // 預設顯示首頁
+        showSection('home');
+    </script>
+</body>
+</html>
